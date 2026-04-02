@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Review Prompt Generator</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f4f7f6;
+    color: #333;
+  }
+  .prompt-container {
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  h2 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid #e1e4e8;
+    color: #24292e;
+  }
+  .copy-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
+  }
+  .copy-btn:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="prompt-container">
+  <h2>Comprehensive Home Insurance Prompt</h2>
+  <button class="copy-btn" onclick="copyPrompt()">Copy Prompt to Clipboard</button>
+  
+  <pre id="promptText">**System Role & Objective:**
+Conduct an independent, comprehensive review of my current home insurance policy with Farmers Insurance. The property is located in California (not in a designated high wildfire risk zone).
+
+**Primary Source:**
+Use the attached insurance document as the primary source of truth. If any key information is missing or unclear, explicitly call it out and proceed with reasonable assumptions.
+
+### **Phase 1: Analysis Requirements**
+
+**0. Data Extraction (from document)**
+Extract and summarize all key policy details, including:
+* Dwelling coverage (Coverage A)
+* Other structures, personal property, liability, and Additional Living Expenses (ALE)
+* Deductibles and Premium
+* Endorsements and riders
+* *Validation:* Highlight any missing, inconsistent, or ambiguous information and validate internal consistency (e.g., coverage vs. deductible vs. endorsements).
+
+**1. Coverage Adequacy**
+* Dwelling coverage vs. realistic replacement cost in California (account for high labor/material costs).
+* Extended or guaranteed replacement cost provisions (critical in CA).
+* Adequacy of personal property, liability, and ALE.
+
+**2. California-Specific Risk Factors**
+* Wildfire coverage terms (confirm inclusion even if low-risk zone).
+* Smoke damage, evacuation, and loss-of-use coverage.
+* Ordinance & law coverage (strict CA building codes).
+* Inflation guard or rebuild cost escalation features.
+
+**3. Policy Structure & Gaps**
+* Deductibles (flat vs. % based, and competitiveness).
+* Exclusions or limitations specific to California policies.
+* Coverage gaps (e.g., sewer backup, water damage nuances, earthquakes).
+
+**4. Pricing & Competitiveness**
+* Premium benchmarking against similar insurers (Lemonade, State Farm, Allstate) within California.
+* Availability constraints or underwriting tightening in the CA market.
+* Discounts applied (bundling, claims-free, security systems, etc.).
+
+**5. Claims & Carrier Quality**
+* Claims handling reputation and payout reliability.
+* Customer satisfaction and regulatory environment in California.
+
+**6. Market Value Cross-Check (Sanity Validation Only)**
+* Compare dwelling coverage to estimated replacement cost (primary metric).
+* Cross-check against the current market value of the property only as a secondary reference.
+* Identify whether high market value (e.g., due to land value in CA) may distort the perception of adequate coverage.
+* Flag if coverage deviates materially from realistic rebuild costs.
+
+---
+
+### **Phase 2: Required Output Format**
+
+**A. Executive Summary**
+* Clear verdict: Am I overpaying, underinsured, or appropriately covered?
+* Top 3 risks or inefficiencies.
+
+**B. Detailed Findings**
+* Strengths of the current policy.
+* Weaknesses / gaps.
+* Risk exposure areas (especially California-specific).
+
+**C. Recommendations**
+* Specific actions to optimize coverage and/or reduce premium.
+* Ideal coverage adjustments (with ranges where applicable).
+* Clear recommendation on whether to stay with Farmers Insurance or consider switching, and under what conditions.
+
+**D. Visual / Infographic Output (PNG Image Request)**
+Generate an easy-to-understand visual infographic summarizing the analysis and **output it as a downloadable PNG image file**. The PNG infographic should visually represent the following components (ensure private details like specific names or cities are generalized):
+1.  **Coverage vs Benchmark Table:** Show Category, Your Coverage, Benchmark, and Status.
+2.  **Premium Value Scorecard:** Visualize a Price vs Coverage Score (1–10) and Value vs Market Position (Below Avg / Avg / Above Avg).
+3.  **Risk Heatmap:** Highlight Risk Areas, Level (Low/Med/High), and Notes.
+4.  **Decision Snapshot:** Display the final recommendation (Stay / Optimize / Shop Around) and Confidence Level (High / Medium / Low).</pre>
+</div>
+
+<script>
+function copyPrompt() {
+  const text = document.getElementById("promptText").innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Prompt copied to clipboard!");
+  }).catch(err => {
+    console.error("Failed to copy text: ", err);
+    alert("Failed to copy text. Please select and copy manually.");
+  });
+}
+</script>
+
+</body>
+</html>
