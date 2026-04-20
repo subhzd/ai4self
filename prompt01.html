@@ -61,75 +61,65 @@
   
   <pre id="promptText">**System Role & Objective:**
 Conduct an independent, comprehensive review of my current home insurance policy with Current Insurance Provider. The property is located in California (not in a designated high wildfire risk zone).
-
 **Primary Source:**
 Use the attached insurance document as the primary source of truth. If any key information is missing or unclear, explicitly call it out and proceed with reasonable assumptions.
-
 ### **Phase 1: Analysis Requirements**
-
 **0. Data Extraction (from document)**
 Extract and summarize all key policy details, including:
-* Dwelling coverage (Coverage A)
-* Other structures, personal property, liability, and Additional Living Expenses (ALE)
-* Deductibles and Premium
-* Endorsements and riders
-* *Validation:* Highlight any missing, inconsistent, or ambiguous information and validate internal consistency (e.g., coverage vs. deductible vs. endorsements).
 
+Dwelling coverage (Coverage A)
+Other structures, personal property, liability, and Additional Living Expenses (ALE)
+Deductibles and Premium
+Endorsements and riders
+*Validation:* Highlight any missing, inconsistent, or ambiguous information and validate internal consistency (e.g., coverage vs. deductible vs. endorsements).
 **1. Coverage Adequacy**
-* Dwelling coverage vs. realistic replacement cost in California (account for high labor/material costs).
-* Extended or guaranteed replacement cost provisions (critical in CA).
-* Adequacy of personal property, liability, and ALE.
-
+Dwelling coverage vs. realistic replacement cost in California (account for high labor/material costs).
+Extended or guaranteed replacement cost provisions (critical in CA).
+Adequacy of personal property, liability, and ALE.
 **2. California-Specific Risk Factors**
-* Wildfire coverage terms (confirm inclusion even if low-risk zone).
-* Smoke damage, evacuation, and loss-of-use coverage.
-* Ordinance & law coverage (strict CA building codes).
-* Inflation guard or rebuild cost escalation features.
-
+Wildfire coverage terms (confirm inclusion even if low-risk zone).
+Smoke damage, evacuation, and loss-of-use coverage.
+Ordinance & law coverage (strict CA building codes).
+Inflation guard or rebuild cost escalation features.
 **3. Policy Structure & Gaps**
-* Deductibles (flat vs. % based, and competitiveness).
-* Exclusions or limitations specific to California policies.
-* Coverage gaps (e.g., sewer backup, water damage nuances, earthquakes).
-
+Deductibles (flat vs. % based, and competitiveness).
+Exclusions or limitations specific to California policies.
+Coverage gaps (e.g., sewer backup, water damage nuances, earthquakes).
 **4. Pricing & Competitiveness**
-* Premium benchmarking against similar insurers (Lemonade, State Farm, Allstate) within California.
-* Availability constraints or underwriting tightening in the CA market.
-* Discounts applied (bundling, claims-free, security systems, etc.).
-
+Premium benchmarking against similar insurers (Lemonade, State Farm, Allstate) within California.
+Availability constraints or underwriting tightening in the CA market.
+Discounts applied (bundling, claims-free, security systems, etc.).
 **5. Claims & Carrier Quality**
-* Claims handling reputation and payout reliability.
-* Customer satisfaction and regulatory environment in California.
-
+Claims handling reputation and payout reliability.
+Customer satisfaction and regulatory environment in California.
 **6. Market Value Cross-Check (Sanity Validation Only)**
-* Compare dwelling coverage to estimated replacement cost (primary metric).
-* Cross-check against the current market value of the property only as a secondary reference.
-* Identify whether high market value (e.g., due to land value in CA) may distort the perception of adequate coverage.
-* Flag if coverage deviates materially from realistic rebuild costs.
+Compare dwelling coverage to estimated replacement cost (primary metric).
+Cross-check against the current market value of the property only as a secondary reference.
+Identify whether high market value (e.g., due to land value in CA) may distort the perception of adequate coverage.
+Flag if coverage deviates materially from realistic rebuild costs.
 
----
 
 ### **Phase 2: Required Output Format**
-
 **A. Executive Summary**
-* Clear verdict: Am I overpaying, underinsured, or appropriately covered?
-* Top 3 risks or inefficiencies.
 
+Clear verdict: Am I overpaying, underinsured, or appropriately covered?
+Top 3 risks or inefficiencies.
 **B. Detailed Findings**
-* Strengths of the current policy.
-* Weaknesses / gaps.
-* Risk exposure areas (especially California-specific).
-
+Strengths of the current policy.
+Weaknesses / gaps.
+Risk exposure areas (especially California-specific).
 **C. Recommendations**
-* Specific actions to optimize coverage and/or reduce premium.
-* Ideal coverage adjustments (with ranges where applicable).
-* Clear recommendation on whether to stay with Current Insurance Provider or consider switching, and under what conditions.
+Specific actions to optimize coverage and/or reduce premium.
+Ideal coverage adjustments (with ranges where applicable).
+Clear recommendation on whether to stay with Current Insurance Provider or consider switching, and under what conditions.
+**D. Image Output (PNG Image Request)**
+Generate an easy-to-understand visual image 16:9 summarizing the analysis and **output it as a downloadable PNG image file**. The PNG infographic should visually represent the following components (ensure private details like specific names or cities are generalized):
 
-**D. Visual / Infographic Output (PNG Image Request)**
-Generate an easy-to-understand visual infographic summarizing the analysis and **output it as a downloadable PNG image file**. The PNG infographic should visually represent the following components (ensure private details like specific names or cities are generalized):
-1.  **Coverage vs Benchmark Table:** Show Category, Your Coverage, Benchmark, and Status.
-2.  **Premium Value Scorecard:** Visualize a Price vs Coverage Score (1–10) and Value vs Market Position (Below Avg / Avg / Above Avg).
-3.  **Risk Heatmap:** Highlight Risk Areas, Level (Low/Med/High), and Notes.
-4.  **Decision Snapshot:** Display the final recommendation (Stay / Optimize / Shop Around) and Confidence Level (High / Medium / Low).</pre>
+
+**Coverage vs Benchmark Table:** Show Category, Your Coverage, Benchmark, and Status.
+**Premium Value Scorecard:** Visualize a Price vs Coverage Score (1–10) and Value vs Market Position (Below Avg / Avg / Above Avg).
+**Risk Heatmap:** Highlight Risk Areas, Level (Low/Med/High), and Notes.
+**Decision Snapshot:** Display the final recommendation (Stay / Optimize / Shop Around) and Confidence Level (High / Medium / Low).</pre>
 </div>
 
 <script>
